@@ -2,6 +2,8 @@ package com.ms.acl.api.dto;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotBlank;
+
 import com.ms.acl.entity.User;
 
 import lombok.AllArgsConstructor;
@@ -16,7 +18,10 @@ import lombok.NoArgsConstructor;
 public class UserDTO {
 
 	private Long id;
+	
+	@NotBlank(message = "Username required")
 	private String username;
+	
 	private String password;
 	private LocalDate created_at;
 	private LocalDate updated_at;

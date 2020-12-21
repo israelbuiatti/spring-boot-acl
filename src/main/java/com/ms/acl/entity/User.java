@@ -53,8 +53,9 @@ public class User {
 	@Convert(converter = Jsr310JpaConverters.LocalDateConverter.class)
 	private LocalDate updatedAt;
 	
+	@Builder.Default
 	@Column(name = "flg_ativo")
-	private Boolean flgAtivo;
+	private Boolean flgAtivo = true;
 
 
 }
